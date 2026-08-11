@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO/GEO 增长工厂仪表盘</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-6xl mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6">SEO/GEO 自动化增长工厂</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-white p-4 rounded shadow">
+                <h3 class="text-sm text-gray-500">总曝光目标</h3>
+                <p class="text-3xl font-bold">830,000</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <h3 class="text-sm text-gray-500">AI 流量占比</h3>
+                <p class="text-3xl font-bold text-blue-600">--%</p>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <h3 class="text-sm text-gray-500">停留时间</h3>
+                <p class="text-3xl font-bold text-green-600">≥7min</p>
+            </div>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+            <h2 class="text-xl font-semibold mb-4">问题修复进度</h2>
+            <canvas id="progressChart" height="100"></canvas>
+        </div>
+        <div class="mt-6 bg-white p-4 rounded shadow">
+            <h2 class="text-xl font-semibold mb-4">技术错误列表</h2>
+            <table class="w-full text-sm">
+                <thead><tr class="bg-gray-100"><th class="p-2">问题</th><th class="p-2">优先级</th><th class="p-2">状态</th><th class="p-2">操作</th></tr></thead>
+                <tbody id="issuesTable">
+                    <tr><td class="p-2">等待审计数据...</td><td class="p-2">-</td><td class="p-2">--</td><td class="p-2"><button class="bg-blue-500 text-white px-2 py-1 rounded" onclick="refresh()">重新检测</button></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('progressChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: { labels: ['技术修复', '内容生产', 'GEO优化', '外链建设'], datasets: [{ label: '进度(%)', data: [0, 0, 0, 0], backgroundColor: ['#3B82F6','#10B981','#F59E0B','#8B5CF6'] }] },
+            options: { responsive: true, plugins: { legend: { display: false } } }
+        });
+        function refresh() { alert('调用 audit 工作流...'); }
+    </script>
+</body>
+</html>

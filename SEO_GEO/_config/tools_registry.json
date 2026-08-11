@@ -1,0 +1,58 @@
+{
+  "tools": [
+    {
+      "tool_id": "firecrawl_scrape",
+      "name": "Firecrawl 网页爬取",
+      "api_source": "firecrawl",
+      "env_key": "FIRECRAWL_API_KEY",
+      "endpoint": "https://api.firecrawl.dev/v1/scrape",
+      "method": "POST",
+      "enabled": true
+    },
+    {
+      "tool_id": "serper_search",
+      "name": "Serper 搜索",
+      "api_source": "serper",
+      "env_key": "SERPER_API_KEY",
+      "endpoint": "https://google.serper.dev/search",
+      "method": "POST",
+      "enabled": true
+    },
+    {
+      "tool_id": "pagespeed_insights",
+      "name": "PageSpeed Insights",
+      "api_source": "pagespeed",
+      "env_key": "PSI_API_KEY",
+      "endpoint": "https://pagespeedonline.googleapis.com/v5/runPagespeed",
+      "method": "GET",
+      "enabled": true
+    },
+    {
+      "tool_id": "perplexity_factcheck",
+      "name": "Perplexity 事实核查",
+      "api_source": "perplexity",
+      "env_key": "PERPLEXITY_API_KEY",
+      "endpoint": "https://api.perplexity.ai/chat/completions",
+      "method": "POST",
+      "enabled": true
+    },
+    {
+      "tool_id": "gemini_quality",
+      "name": "Gemini 质量评分",
+      "api_source": "gemini",
+      "env_key": "GEMINI_API_KEY",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent",
+      "method": "POST",
+      "enabled": true
+    },
+    {
+      "tool_id": "playwright_screenshot",
+      "name": "Playwright 截图",
+      "api_source": "local",
+      "env_key": null,
+      "endpoint": "local",
+      "method": "exec",
+      "enabled": true
+    }
+  ]
+}

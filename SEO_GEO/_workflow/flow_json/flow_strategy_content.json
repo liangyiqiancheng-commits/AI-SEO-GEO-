@@ -1,0 +1,18 @@
+{
+  "flow_id": "strategy_content_flow",
+  "trigger_command": "generate",
+  "route_config": { "use_global": true },
+  "execute_mode": "serial",
+  "bind_skills": ["site_strategy", "geo_analysis", "blog_writer", "geo_optimizer", "schema_generator"],
+  "tools_nodes": [
+    { "stage": "before_skill", "tool_id": "serper_search" }
+  ],
+  "output_root": "output/",
+  "steps": [
+    { "order": 1, "skill": "site_strategy", "params": { "url": "{{url}}" }, "output": "output/strategy/12-week-roadmap.md" },
+    { "order": 2, "skill": "geo_analysis", "params": { "url": "{{url}}" } },
+    { "order": 3, "skill": "blog_writer", "params": { "url": "{{url}}" }, "output": "output/content/blog_*.md" },
+    { "order": 4, "skill": "geo_optimizer", "params": { "source": "blog" } },
+    { "order": 5, "skill": "schema_generator", "params": { "source": "blog" } }
+  ]
+}

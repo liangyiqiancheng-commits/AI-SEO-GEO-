@@ -1,0 +1,19 @@
+{
+  "flow_id": "audit_flow",
+  "trigger_command": "audit",
+  "route_config": { "use_global": true },
+  "execute_mode": "serial",
+  "bind_skills": ["seo_research", "mockup_gen", "qa_validator"],
+  "tools_nodes": [
+    { "stage": "before_skill", "tool_id": "firecrawl_scrape" },
+    { "stage": "before_skill", "tool_id": "pagespeed_insights" }
+  ],
+  "output_root": "output/audit/",
+  "steps": [
+    { "order": 1, "tool": "firecrawl_scrape", "params": { "url": "{{url}}" } },
+    { "order": 2, "tool": "pagespeed_insights", "params": { "url": "{{url}}" } },
+    { "order": 3, "skill": "seo_research", "params": { "url": "{{url}}" } },
+    { "order": 4, "skill": "mockup_gen", "params": { "url": "{{url}}" } },
+    { "order": 5, "skill": "qa_validator", "params": { "source": "audit" } }
+  ]
+}

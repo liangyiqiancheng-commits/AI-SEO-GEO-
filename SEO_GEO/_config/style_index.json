@@ -1,0 +1,8 @@
+{
+  "styles": [
+    { "style_id": "minimal_tech", "name": "极简科技风", "color_palette": ["#0F172A", "#3B82F6", "#F8FAFC"], "font": "Inter" },
+    { "style_id": "warm_creative", "name": "温暖创意风", "color_palette": ["#7C3AED", "#F59E0B", "#FEF3C7"], "font": "Nunito" },
+    { "style_id": "bold_dark", "name": " bold暗色风", "color_palette": ["#111827", "#EF4444", "#F3F4F6"], "font": "Space Grotesk" },
+    { "style_id": "clean_green", "name": "清新自然风", "color_palette": ["#065F46", "#34D399", "#ECFDF5"], "font": "DM Sans" }
+  ]
+}

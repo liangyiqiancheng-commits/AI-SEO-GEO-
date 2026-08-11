@@ -1,0 +1,32 @@
+{
+  "platforms": [
+    {
+      "platform_id": "google_search",
+      "name": "Google Search",
+      "geo_priority": "high",
+      "content_format": "long_form_article",
+      "schema_required": true
+    },
+    {
+      "platform_id": "chatgpt",
+      "name": "ChatGPT / GPT-4o",
+      "geo_priority": "high",
+      "content_format": "conversational_with_facts",
+      "schema_required": false
+    },
+    {
+      "platform_id": "perplexity",
+      "name": "Perplexity AI",
+      "geo_priority": "high",
+      "content_format": "cited_facts",
+      "schema_required": false
+    },
+    {
+      "platform_id": "xiaohongshu",
+      "name": "小红书",
+      "geo_priority": "medium",
+      "content_format": "visual_card",
+      "schema_required": false
+    }
+  ]
+}

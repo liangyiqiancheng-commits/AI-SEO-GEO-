@@ -1,0 +1,19 @@
+{
+  "workflows": [
+    {
+      "flow_id": "audit_flow",
+      "trigger_command": "audit",
+      "file": "flow_audit.json"
+    },
+    {
+      "flow_id": "strategy_content_flow",
+      "trigger_command": "generate",
+      "file": "flow_strategy_content.json"
+    },
+    {
+      "flow_id": "qa_delivery_flow",
+      "trigger_command": "qa",
+      "file": "flow_qa_delivery.json"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "skills": [
+    { "skill_id": "site_strategy", "trigger": "strategy", "file": "skill_site_strategy.md" },
+    { "skill_id": "seo_research", "trigger": "keyword_research", "file": "skill_seo_research.md" },
+    { "skill_id": "geo_analysis", "trigger": "geo_intent", "file": "skill_geo_analysis.md" },
+    { "skill_id": "blog_writer", "trigger": "write_blog", "file": "skill_blog_writer.md" },
+    { "skill_id": "geo_optimizer", "trigger": "geo_optimize", "file": "skill_geo_optimizer.md" },
+    { "skill_id": "schema_generator", "trigger": "generate_schema", "file": "skill_schema_generator.md" },
+    { "skill_id": "mockup_gen", "trigger": "screenshot", "file": "skill_mockup_gen.md" },
+    { "skill_id": "qa_validator", "trigger": "qa_check", "file": "skill_qa_validator.md" },
+    { "skill_id": "self_optimize", "trigger": "auto_optimize", "file": "skill_self_optimize.md" },
+    { "skill_id": "pdf_reporter", "trigger": "export_pdf", "file": "skill_pdf_reporter.md" },
+    { "skill_id": "mark_slides", "trigger": "to_slides", "file": "skill_mark_slides.md" },
+    { "skill_id": "dashboard_builder", "trigger": "build_dashboard", "file": "skill_dashboard_builder.md" }
+  ]
+}

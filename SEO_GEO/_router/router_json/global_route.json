@@ -1,0 +1,14 @@
+{
+  "models": [
+    {"id": "claude", "name": "Claude", "cost_weight": 9, "primary": true},
+    {"id": "grok", "name": "Grok", "cost_weight": 2, "primary": false},
+    {"id": "gpt4o", "name": "GPT-4o", "cost_weight": 5, "primary": false}
+  ],
+  "task_routing": {
+    "simple": ["grok", "gpt4o", "claude"],
+    "medium": ["gpt4o", "claude", "grok"],
+    "complex": ["claude", "gpt4o", "grok"]
+  },
+  "quota_threshold": 0.9,
+  "alarm_enabled": true
+}

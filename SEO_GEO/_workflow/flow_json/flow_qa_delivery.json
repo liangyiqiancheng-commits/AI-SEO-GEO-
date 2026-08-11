@@ -1,0 +1,20 @@
+{
+  "flow_id": "qa_delivery_flow",
+  "trigger_command": "qa",
+  "route_config": { "use_global": true },
+  "execute_mode": "serial",
+  "bind_skills": ["qa_validator", "self_optimize", "pdf_reporter", "mark_slides", "dashboard_builder"],
+  "tools_nodes": [
+    { "stage": "before_skill", "tool_id": "perplexity_factcheck" },
+    { "stage": "before_skill", "tool_id": "gemini_quality" },
+    { "stage": "during_skill", "tool_id": "playwright_screenshot" }
+  ],
+  "output_root": "output/",
+  "steps": [
+    { "order": 1, "skill": "qa_validator", "params": { "source": "content" } },
+    { "order": 2, "skill": "self_optimize", "params": { "source": "content" } },
+    { "order": 3, "skill": "pdf_reporter", "params": { "source": "audit" }, "output": "output/reports/Final_Report.pdf" },
+    { "order": 4, "skill": "mark_slides", "params": { "source": "report" }, "output": "output/reports/presentation.marp.md" },
+    { "order": 5, "skill": "dashboard_builder", "params": {}, "output": "output/dashboard/index.html" }
+  ]
+}

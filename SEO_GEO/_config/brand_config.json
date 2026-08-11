@@ -1,0 +1,11 @@
+{
+  "brand_name": "",
+  "brand_tagline": "",
+  "brand_voice": "",
+  "target_audience": "",
+  "primary_language": "zh-CN",
+  "secondary_languages": [],
+  "tone": ["professional", "helpful", "data-driven"],
+  "forbidden_words": [],
+  "style_reference": "STYLE-GUIDE.md"
+}
