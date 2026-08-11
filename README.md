@@ -13,7 +13,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](./)
 [![Token Optimized](https://img.shields.io/badge/Token%20Optimized-V4.1-orange)](./)
 
-**仅需 1 人，3 个月实现新站 83 万次曝光。** 本系统是一个专为 Claude Code 设计的全自动 SEO/GEO 智能代理（Agent），深度融合了生成式引擎优化（GEO）与传统的技术性 SEO，让 AI 流量留存率提升至传统搜索的 3 倍。
+** 本系统是一个专为 Claude Code 设计的全自动 SEO/GEO 智能代理（Agent），深度融合了生成式引擎优化（GEO）与传统的技术性 SEO，让 AI 流量留存率提升至传统搜索的 3 倍。
 
 ---
 
