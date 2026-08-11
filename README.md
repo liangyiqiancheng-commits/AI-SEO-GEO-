@@ -30,6 +30,23 @@
 | 🔄 自优化 | 基于反馈闭环持续迭代内容质量 | `auto_optimize` Skill |
 
 ---
+层级	功能描述
+Layer 1 地基	全局配置（.env）、品牌资产（_context）、JSON 注册表
+Layer 2 积木	视觉风格指南（STYLE-GUIDE）、竞品素材库、标准模板
+Layer 3 技能	12 个标准化内容生产单元（见下文功能矩阵）
+Layer 4 工具	第三方 API 网关（飞书/Notion/爬虫/性能检测）
+Layer 5 路由	多模型额度监控、故障转移、Token 成本权重分配
+Layer 6 工作流	串行/并行流程编排，支持条件分支与工具节点插入
+Layer 7 项目	临时产出归档、交付物打包、看板渲染
+
+## ✨ 核心亮点
+
+- **🎯 目标驱动**：精准提升 ChatGPT、Perplexity 等 AI 搜索引擎的引用流量，访客平均停留时长 ≥ 7 分钟。
+- **🏗️ 七层解耦架构**：严格遵循 Foundation → Blocks → Skills → Tools → Router → Workflow → Projects，逻辑清晰，易于维护。
+- **🤖 智能模型路由（Router）**：内置额度监控与熔断机制。Claude 额度耗尽时自动降级切换至 Grok / GPT-4o，杜绝超额扣费。
+- **💰 Token 极致节约（V4.1）**：全局缓存复用（`_cache`）+ 成本权重分流，相比传统方案降低 40%~70% Token 消耗。
+- **🔧 统一工具网关**：Firecrawl、Serper、PageSpeed、Perplexity、Gemini 等外部 API 统一封装，禁止硬编码。
+
 
 ## 🗂️ 目录结构
 
